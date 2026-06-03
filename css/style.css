@@ -1,0 +1,1275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #1f2937;
+  background: #ffffff;
+  padding-top: 90px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.header {
+  height: 90px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  background: #ffffff;
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  z-index: 1000;
+
+  transition: 0.3s;
+}
+
+.header .container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header.scrolled {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ЛОГОТИП */
+
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-mark {
+  width: 48px;
+  height: 48px;
+
+  background: #1e3a8a;
+
+  color: white;
+
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 800;
+}
+
+.logo-text {
+  font-size: 20px;
+
+  font-weight: 700;
+
+  color: #111827;
+}
+
+.nav ul {
+  display: flex;
+  gap: 35px;
+}
+
+.nav a {
+  color: #374151;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #1e3a8a;
+}
+
+.btn-consultation {
+  background: #1e3a8a;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Hero блок */
+
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(rgba(30, 58, 138, 0.85), rgba(30, 58, 138, 0.85)),
+    url("../images/hero-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 58px;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.hero p {
+  color: white;
+  font-size: 22px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-primary {
+  background: #d4af37;
+  color: white;
+  padding: 16px 28px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.btn-secondary {
+  border: 2px solid white;
+  color: white;
+  padding: 16px 28px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+/* Наши услуги */
+
+.services {
+  padding: 120px 0;
+  background: #f8fafc;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 70px;
+}
+
+.section-subtitle {
+  display: inline-block;
+  color: #1e3a8a;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-header h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #111827;
+}
+
+.section-header p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #6b7280;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.service-card {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  transition: 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background: #1e3a8a;
+}
+
+.service-card:hover {
+  transform: translateY(-12px);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  font-size: 42px;
+  margin-bottom: 25px;
+}
+
+.service-card h3 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #111827;
+}
+
+.service-card p {
+  color: #6b7280;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.service-card a {
+  color: #1e3a8a;
+  font-weight: 700;
+}
+
+/* Блог доверия 5000+ довольных клиентов */
+
+.stats {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 54px;
+  color: #1e3a8a;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.stat-item p {
+  color: #6b7280;
+  font-size: 18px;
+}
+
+/* Как мы работаем */
+
+.process {
+  padding: 120px 0;
+  background: #f8fafc;
+}
+
+.process-grid {
+  margin-top: 70px;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+}
+
+.process-item {
+  background: white;
+
+  padding: 35px 25px;
+
+  border-radius: 18px;
+
+  text-align: center;
+
+  position: relative;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+  transition: 0.3s;
+}
+
+.process-item:hover {
+  transform: translateY(-8px);
+}
+
+.process-number {
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 25px;
+
+  border-radius: 50%;
+
+  background: #1e3a8a;
+
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.process-item h3 {
+  margin-bottom: 15px;
+
+  font-size: 22px;
+
+  color: #111827;
+}
+
+.process-item p {
+  line-height: 1.7;
+  color: #6b7280;
+}
+
+/* Популярные направления, страны */
+
+.countries {
+  padding: 120px 0;
+  background: #ffffff;
+}
+
+.countries-grid {
+  margin-top: 70px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.country-card {
+  background: #f8fafc;
+
+  padding: 35px;
+
+  border-radius: 18px;
+
+  transition: 0.3s;
+
+  cursor: pointer;
+
+  border: 1px solid #e5e7eb;
+}
+
+.country-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+
+  border-color: #1e3a8a;
+}
+
+.country-flag {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.country-card h3 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #111827;
+}
+
+.country-card p {
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+/* С какими документами мы работаем */
+
+.documents {
+  padding: 120px 0;
+  background: #f8fafc;
+}
+
+.documents-grid {
+  margin-top: 70px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.document-item {
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 14px;
+
+  text-align: center;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  border: 1px solid #e5e7eb;
+
+  transition: 0.3s;
+}
+
+.document-item:hover {
+  border-color: #1e3a8a;
+
+  transform: translateY(-5px);
+
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Почему выбирают нас */
+
+.advantages {
+  padding: 120px 0;
+  background: #1e3a8a;
+}
+
+.advantages .section-subtitle {
+  color: #d4af37;
+}
+
+.advantages .section-header h2,
+.advantages .section-header p {
+  color: white;
+}
+
+.advantages-grid {
+  margin-top: 70px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.advantage-card {
+  background: rgba(255, 255, 255, 0.08);
+
+  padding: 35px;
+
+  border-radius: 18px;
+
+  backdrop-filter: blur(10px);
+
+  transition: 0.3s;
+}
+
+.advantage-card:hover {
+  transform: translateY(-8px);
+
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.advantage-icon {
+  font-size: 42px;
+
+  margin-bottom: 20px;
+}
+
+.advantage-card h3 {
+  color: white;
+
+  margin-bottom: 15px;
+
+  font-size: 24px;
+}
+
+.advantage-card p {
+  color: rgba(255, 255, 255, 0.85);
+
+  line-height: 1.8;
+}
+
+/* Часто задаваемые вопросы */
+
+.faq {
+  padding: 120px 0;
+  background: #ffffff;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 70px auto 0;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+}
+
+.faq-item summary {
+  padding: 22px 25px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  list-style: none;
+
+  position: relative;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+
+  position: absolute;
+  right: 25px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  font-size: 24px;
+  font-weight: 700;
+
+  color: #1e3a8a;
+}
+
+.faq-item[open] summary::after {
+  content: "−";
+}
+
+.faq-item p {
+  padding: 0 25px 25px;
+
+  color: #6b7280;
+
+  line-height: 1.8;
+}
+
+/* FOOTER черный в самом низу */
+
+.footer {
+  background: #111827;
+  color: white;
+
+  padding-top: 80px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+
+  gap: 50px;
+
+  padding-bottom: 60px;
+}
+
+.footer-column h3,
+.footer-column h4 {
+  margin-bottom: 20px;
+}
+
+.footer-column h3 {
+  color: white;
+  font-size: 28px;
+}
+
+.footer-column h4 {
+  color: #d4af37;
+}
+
+.footer-column p {
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-column a {
+  color: rgba(255, 255, 255, 0.8);
+
+  transition: 0.3s;
+}
+
+.footer-column a:hover {
+  color: #d4af37;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  padding: 25px 0;
+
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* =========================
+   АПОСТИЛЬ основа
+========================= */
+
+.service-hero {
+  padding: 140px 0;
+
+  background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(30, 58, 138, 0.9));
+
+  color: white;
+}
+
+.service-hero h1 {
+  font-size: 56px;
+
+  margin-bottom: 20px;
+}
+
+.service-hero p {
+  font-size: 22px;
+
+  max-width: 700px;
+
+  line-height: 1.8;
+}
+
+/* Контент */
+
+.content-section {
+  padding: 100px 0;
+}
+
+.content-section h2 {
+    
+  font-size: 42px;
+
+  margin-bottom: 25px;
+
+  color: #111827;
+
+  text-align: center;
+}
+
+.content-section p {
+  margin-bottom: 20px;
+
+  font-size: 18px;
+
+  line-height: 1.9;
+
+  color: #4b5563;
+  
+}
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp-btn {
+  position: fixed;
+
+  right: 30px;
+  bottom: 30px;
+
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+
+  background: #25d366;
+
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 32px;
+
+  text-decoration: none;
+
+  z-index: 9999;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+  transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+}
+
+/* =========================
+   АПОСТИЛЬ
+========================= */
+
+
+.breadcrumbs {
+  padding: 20px 0;
+  background: #f8fafc;
+}
+
+.breadcrumbs a {
+  color: #1e3a8a;
+}
+
+.breadcrumbs span {
+  color: #6b7280;
+}
+
+/* Сроки оформления */
+
+.timeline {
+  padding: 100px 0;
+  background: #f8fafc;
+}
+
+.timeline h2 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.timeline-card {
+  background: white;
+
+  padding: 40px;
+
+  border-radius: 18px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-card h3 {
+  margin-bottom: 20px;
+}
+
+.timeline-card span {
+  color: #1e3a8a;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Как оформить апостиль */
+
+.apostille-steps {
+  padding: 100px 0;
+}
+
+.apostille-steps h2 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.steps-list {
+  max-width: 900px;
+  margin: auto;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+
+  gap: 25px;
+
+  margin-bottom: 25px;
+
+  padding: 25px;
+
+  background: #f8fafc;
+
+  border-radius: 14px;
+}
+
+.step span {
+  min-width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+
+  background: #1e3a8a;
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+}
+
+/* Блок доверия */
+
+.trust-block {
+  padding: 100px 0;
+  background: #f8fafc;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+.trust-grid h3 {
+  font-size: 48px;
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+
+/* Заявка */
+
+.cta-section {
+  padding: 120px 0;
+}
+
+.cta-box {
+  background: #1e3a8a;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 80px;
+
+  border-radius: 24px;
+}
+
+.cta-box h2 {
+  margin-bottom: 20px;
+}
+
+.cta-box p {
+  margin-bottom: 35px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Оставьте заявку */
+
+.contact-form-section {
+  padding: 120px 0;
+}
+
+.form-wrapper {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 60px;
+
+  align-items: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 18px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+
+  min-height: 160px;
+}
+
+.contact-form button {
+  background: #1e3a8a;
+
+  color: white;
+
+  border: none;
+
+  padding: 18px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* =========================
+   КОНТАКТЫ
+========================= */
+
+.contacts-section {
+  padding: 100px 0;
+}
+
+.contacts-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 30px;
+}
+
+.contact-card {
+  background: white;
+
+  padding: 35px;
+
+  border-radius: 18px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.contact-card h3 {
+  margin-bottom: 15px;
+
+  color: #1e3a8a;
+}
+
+.contact-card p {
+  color: #6b7280;
+}
+
+/* График работы */
+
+.schedule-section {
+  padding-bottom: 100px;
+}
+
+.schedule-box {
+  max-width: 700px;
+
+  margin: auto;
+
+  background: #f8fafc;
+
+  padding: 50px;
+
+  border-radius: 20px;
+}
+
+.schedule-box h2 {
+  margin-bottom: 25px;
+
+  text-align: center;
+}
+
+.schedule-box ul {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+/* =========================
+   НОСТРИФИКАЦИЯ
+========================= */
+
+.service-hero {
+  background: linear-gradient(135deg, #003366, #00509e);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.service-hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.service-hero p {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.breadcrumbs {
+    background: #f5f5f5;
+    padding: 18px 0;
+}
+
+.breadcrumbs a {
+    color: #003366;
+    text-decoration: none;
+}
+
+.breadcrumbs span {
+    color: #666;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: #f4b400;
+  color: #000;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+}
+
+.btn-secondary {
+  background: white;
+  color: #003366;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px);
+}
+
+/* Секции */
+
+.service-content,
+.documents-section,
+.steps-section,
+.advantages,
+.faq,
+.cta-section {
+  padding: 70px 20px 40px;
+  text-align: center;
+}
+
+.service-content h2,
+.documents-section h2,
+.steps-section h2,
+.advantages h2,
+.faq h2,
+.cta-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+
+/* Карточки документов */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Этапы */
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.step {
+  background: #f8f9fb;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.step span {
+  width: 60px;
+  height: 60px;
+  background: #003366;
+  color: white;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Преимущества */
+
+.advantages ul {
+  max-width: 800px;
+  margin: auto;
+  list-style: none;
+}
+
+.advantages li {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* FAQ */
+
+.faq-item {
+  max-width: 900px;
+  margin: 0 auto 25px;
+  padding: 25px;
+  background: #f8f9fb;
+  border-radius: 10px;
+}
+
+.faq-item h3 {
+  margin-bottom: 10px;
+}
+
+/* CTA */
+
+.cta-section {
+  background: #003366;
+  color: white;
+  text-align: center;
+}
+
+.cta-section p {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+/* =========================
+   Легализация Китай, ОАЭ
+========================= */
+
+.country-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.country-link:hover .country-card {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .countries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .documents-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .advantages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header h2 {
+    font-size: 32px;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .countries-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .documents-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .advantages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
