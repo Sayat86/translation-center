@@ -1,20 +1,34 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const loadComponent = async (selector, file) => {
+    const element = document.querySelector(selector);
 
-    const loadComponent = async (selector, file) => {
+    if (!element) return;
 
-        const element = document.querySelector(selector);
+    const response = await fetch(file);
 
-        if (!element) return;
+    const html = await response.text();
 
-        const response = await fetch(file);
+    element.innerHTML = html;
+  };
 
-        const html = await response.text();
+  loadComponent("#header", "components/header.html").then(() => {
+    const currentPage = window.location.pathname.split("/").pop();
 
-        element.innerHTML = html;
-    };
+    const navLinks = document.querySelectorAll(".nav a");
 
-    loadComponent("#header", "components/header.html");
+    navLinks.forEach((link) => {
+      const href = link.getAttribute("href");
 
-    loadComponent("#footer", "components/footer.html");
+      if (
+        href === currentPage ||
+        (href === "apostille.html" && currentPage.startsWith("apostille-")) ||
+        (href === "legalization.html" &&
+          currentPage.startsWith("legalization-"))
+      ) {
+        link.classList.add("active");
+      }
+    });
+  });
 
+  loadComponent("#footer", "components/footer.html");
 });

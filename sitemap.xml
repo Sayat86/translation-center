@@ -7,6 +7,10 @@
     </url>
 
     <url>
+        <loc>https://yourdomain.kz/about.html</loc>
+    </url>
+
+    <url>
         <loc>https://yourdomain.kz/apostille.html</loc>
     </url>
 
@@ -24,6 +28,34 @@
 
     <url>
         <loc>https://yourdomain.kz/contacts.html</loc>
+    </url>
+
+    <url>
+        <loc>https://yourdomain.kz/privacy-policy.html</loc>
+    </url>
+
+    <url>
+        <loc>https://yourdomain.kz/apostille-germany.html</loc>
+    </url>
+
+    <url>
+        <loc>https://yourdomain.kz/apostille-spain.html</loc>
+    </url>
+
+    <url>
+        <loc>https://yourdomain.kz/apostille-usa.html</loc>
+    </url>
+
+    <url>
+        <loc>https://yourdomain.kz/apostille-turkey.html</loc>
+    </url>
+
+    <url>
+        <loc>https://yourdomain.kz/legalization-china.html</loc>
+    </url>
+
+    <url>
+        <loc>https://yourdomain.kz/legalization-uae.html</loc>
     </url>
 
 </urlset>
