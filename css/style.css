@@ -1704,6 +1704,106 @@ border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
+/* ======================
+   ИНОСТРАННЫЕ ДОКУМЕНТЫ
+====================== */
+
+.foreign-docs {
+    padding: 100px 0;
+
+    background: #f8fafc;
+}
+
+.foreign-docs .container {
+    max-width: 900px;
+
+    text-align: center;
+}
+
+.foreign-docs h2 {
+    font-size: 42px;
+
+    margin-bottom: 25px;
+
+    color: #111827;
+}
+
+.foreign-docs p {
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    color: #4b5563;
+
+    margin-bottom: 40px;
+}
+
+.foreign-docs .btn-primary {
+    display: inline-block;
+}
+
+.foreign-docs .container {
+    max-width: 900px;
+
+    text-align: center;
+
+    background: white;
+
+    padding: 60px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+.foreign-badge {
+    display: inline-block;
+
+    background: #d4af37;
+
+    color: white;
+
+    padding: 8px 18px;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+/* ======================
+   ОТПРАВИТЬ ЗАЯВКУ в апостиле дополнительно
+====================== */
+
+.required {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+.form-note {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.required {
+    color: #dc2626;
+    font-weight: 700;
+}
+
+.optional {
+    color: #6b7280;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
 
 /* ======================
    MOBILE HEADER
