@@ -90,6 +90,12 @@ ul {
   color: #111827;
 }
 
+.logo-image {
+  height: 85px;
+  width: auto;
+  display: block;
+}
+
 .nav ul {
   display: flex;
   gap: 35px;
@@ -1135,6 +1141,10 @@ ul {
   font-size: 36px;
 }
 
+.documents-list{
+  text-align: center;
+}
+
 /* Карточки документов */
 
 .cards {
@@ -1804,6 +1814,147 @@ border-radius: 10px;
     font-weight: 600;
 }
 
+/* ======================
+   ДОКУМЕНТЫ иностранный апостиль
+====================== */
+
+.documents-section {
+    padding: 100px 0;
+}
+
+.documents-section h2 {
+    text-align: center;
+
+    margin-bottom: 50px;
+
+    font-size: 42px;
+}
+
+.documents-section ul {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+    list-style: none;
+
+    padding: 0;
+}
+
+.documents-section li {
+    background: #f8fafc;
+
+    padding: 20px 25px;
+
+    border-radius: 12px;
+
+    border-left: 5px solid #1e3a8a;
+
+    font-weight: 500;
+}
+
+/* ======================
+   СТРАНЫ иностранный апостиль
+====================== */
+
+.country-links {
+    margin-top: 40px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.country-links span {
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    padding: 14px 22px;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+    transition: 0.3s;
+}
+
+.country-links span:hover {
+    transform: translateY(-3px);
+
+    border-color: #d4af37;
+}
+
+.countries-section h2 {
+    text-align: center;
+}
+
+.countries-section p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+/* ======================
+   апостиль востребован. документы
+====================== */
+
+.popular-documents {
+  padding: 80px 0;
+  background: #f8fafc;
+}
+
+.popular-documents h2 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 50px;
+}
+
+.popular-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.popular-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+  border-top: 4px solid #1e3a8a;
+}
+
+.popular-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.popular-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.popular-card p {
+  color: #4b5563;
+  line-height: 1.7;
+}
 
 /* ======================
    MOBILE HEADER
@@ -1856,6 +2007,25 @@ border-radius: 10px;
     .branches-grid {
     grid-template-columns: 1fr;
 }
+}
+
+@media (max-width: 768px) {
+  .popular-documents {
+    padding: 60px 0;
+  }
+
+  .popular-documents h2 {
+    font-size: 28px;
+    margin-bottom: 35px;
+  }
+
+  .popular-card {
+    padding: 25px;
+  }
+
+  .popular-card h3 {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 1024px) {
