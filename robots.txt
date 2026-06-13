@@ -2,4 +2,4 @@ User-agent: *
 
 Allow: /
 
-Sitemap: https://ВАШ-ДОМЕН.kz/sitemap.xml
+Sitemap: https://aibaniz.kz/sitemap.xml
