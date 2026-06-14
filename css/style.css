@@ -583,6 +583,189 @@ ul {
   line-height: 1.8;
 }
 
+/* Фото Айбаниз */
+
+.founder-section {
+  padding: 100px 0;
+}
+
+.founder-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.founder-image {
+  flex: 1;
+}
+
+.founder-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 20px;
+  display: block;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.founder-text {
+  flex: 1.5;
+}
+
+.founder-text h2 {
+  margin-bottom: 20px;
+}
+
+.founder-text p {
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .founder-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .founder-image img {
+    margin: 0 auto;
+  }
+}
+
+/* Фото Айбаниз на странице "О компании" */
+
+.about-founder {
+  padding: 30px 0;
+}
+
+.about-founder .founder-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.about-founder .founder-image {
+  flex: 1;
+}
+
+.about-founder .founder-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.about-founder .founder-text {
+  flex: 1.5;
+}
+
+.about-founder .section-subtitle {
+  display: inline-block;
+  color: var(--primary-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.about-founder h2 {
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+}
+
+.about-founder h3 {
+  color: #666;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.about-founder p {
+  margin-bottom: 18px;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* Планшеты */
+@media (max-width: 992px) {
+  .about-founder .founder-content {
+    gap: 40px;
+  }
+
+  .about-founder h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Телефоны */
+@media (max-width: 768px) {
+  .about-founder {
+    padding: 70px 0;
+  }
+
+  .about-founder .founder-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-founder .founder-image img {
+    max-width: 320px;
+  }
+
+  .about-founder h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-founder h3 {
+    margin-bottom: 20px;
+  }
+}
+
+/* Отзывы */
+
+.rating-summary {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.rating-summary h3 {
+  font-size: 2.5rem;
+  color: #f5b301;
+  margin-bottom: 10px;
+  letter-spacing: 5px;
+}
+
+.rating-summary p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.reviews-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.reviews-gallery img {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reviews-gallery img:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+.reviews-footer {
+  text-align: center;
+  margin-top: 40px;
+}
+
 /* FOOTER черный в самом низу */
 
 .footer {
