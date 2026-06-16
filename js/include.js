@@ -28,6 +28,26 @@ document.addEventListener("DOMContentLoaded", () => {
         link.classList.add("active");
       }
     });
+
+    const burger = document.getElementById("burger");
+    const nav = document.querySelector(".nav");
+    const overlay = document.getElementById("navOverlay");
+
+    console.log("burger =", burger);
+    console.log("nav =", nav);
+
+    if (burger && nav) {
+      burger.addEventListener("click", () => {
+        console.log("CLICK");
+        nav.classList.toggle("active");
+        overlay.classList.toggle("active");
+      });
+      overlay.addEventListener("click", () => {
+        // добавь
+        nav.classList.remove("active"); // добавь
+        overlay.classList.remove("active"); // добавь
+      });
+    }
   });
 
   loadComponent("#footer", "components/footer.html");
