@@ -2086,6 +2086,30 @@ ul {
 }
 
 /* ======================
+   Преимущества иностранный апостиль
+====================== */
+
+.foreign-advantages {
+    background: #d8c27a;
+}
+
+.foreign-advantages h2 {
+    color: #1e293b;
+}
+
+.foreign-advantages li {
+    color: #334155;
+}
+
+/* ======================
+   Преимущества о компании
+====================== */
+
+.advantages-gray {
+    background: #cbd5e1;
+}
+
+/* ======================
    апостиль востребован. документы
 ====================== */
 
@@ -2136,16 +2160,26 @@ ul {
 }
 
 /* ======================
-   MOBILE HEADER
+   переводы после языков
 ====================== */
 
+.languages-more {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    font-weight: 500;
+}
+
+/* ======================
+   MOBILE HEADER
+====================== */
 
 .burger {
   display: none;
 }
 
 @media (max-width: 768px) {
-
   .header {
     height: 70px;
   }
@@ -2192,10 +2226,10 @@ ul {
 
     background: white;
 
-    box-shadow: -10px 0 20px rgba(0,0,0,.15);
+    box-shadow: -10px 0 20px rgba(0, 0, 0, 0.15);
 
     z-index: 9999;
-}
+  }
 
   .nav.active ul {
     display: flex;
@@ -2207,23 +2241,23 @@ ul {
   .nav.active a {
     font-size: 20px;
     font-weight: 600;
-}
+  }
 
-.nav-overlay {
-  display: none;
-  position: fixed;
-  top: 70px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 9998;
-}
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+  }
 
-.nav-overlay.active {
-  display: block;
-  background: rgba(0, 0, 0, 0.6);
-}
+  .nav-overlay.active {
+    display: block;
+    background: rgba(0, 0, 0, 0.6);
+  }
 
   .btn-consultation {
     display: none;
@@ -2255,7 +2289,6 @@ ul {
   .logo-text {
     font-size: 20px;
   }
-
 }
 
 @media (max-width: 768px) {
@@ -2301,7 +2334,6 @@ ul {
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
 }
 
 @media (max-width: 768px) {
@@ -2340,10 +2372,13 @@ ul {
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .contacts-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
-
   .hero-stat {
     padding: 20px 15px;
     min-width: auto;
@@ -2357,7 +2392,6 @@ ul {
     font-size: 14px;
     line-height: 1.4;
   }
-
 }
 
 @media (max-width: 768px) {
@@ -2368,6 +2402,46 @@ ul {
   .hero-stats {
     width: 100%;
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .cta-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .cta-box h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .cta-box p {
+    font-size: 1rem;
+  }
+
+  .cta-box {
+  background: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 60px 5%;
+  border-radius: 24px;
+}
+  
+}
+
+@media (max-width: 768px) {
+
+  .service-hero h1 {
+    font-size: 32px;
+    line-height: 1.2;
   }
 }
 
