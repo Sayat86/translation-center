@@ -43,7 +43,7 @@ ul {
 
   z-index: 1000;
 
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .header .container {
@@ -1161,6 +1161,14 @@ ul {
   font-weight: 600;
 }
 
+.form-info h2 {
+  margin-bottom: 15px;
+}
+
+.form-info p {
+  line-height: 1.6;
+}
+
 /* =========================
    КОНТАКТЫ
 ========================= */
@@ -2090,15 +2098,15 @@ ul {
 ====================== */
 
 .foreign-advantages {
-    background: #d8c27a;
+  background: #d8c27a;
 }
 
 .foreign-advantages h2 {
-    color: #1e293b;
+  color: #1e293b;
 }
 
 .foreign-advantages li {
-    color: #334155;
+  color: #334155;
 }
 
 /* ======================
@@ -2106,7 +2114,7 @@ ul {
 ====================== */
 
 .advantages-gray {
-    background: #cbd5e1;
+  background: #cbd5e1;
 }
 
 /* ======================
@@ -2164,11 +2172,11 @@ ul {
 ====================== */
 
 .languages-more {
-    margin-top: 30px;
-    text-align: center;
-    font-size: 18px;
-    color: #666;
-    font-weight: 500;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  font-weight: 500;
 }
 
 /* ======================
@@ -2376,6 +2384,14 @@ ul {
   .contacts-grid {
     grid-template-columns: 1fr;
   }
+
+  .timeline-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -2428,27 +2444,48 @@ ul {
   }
 
   .cta-box {
-  background: #1e3a8a;
-  color: white;
-  text-align: center;
-  padding: 60px 5%;
-  border-radius: 24px;
-}
-  
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 60px 5%;
+    border-radius: 24px;
+  }
 }
 
 @media (max-width: 768px) {
-
   .service-hero h1 {
     font-size: 32px;
     line-height: 1.2;
   }
 }
 
-/*html, body {
-  overflow-x: hidden;
+@media (max-width: 768px) {
+  .contact-form-section {
+    padding: 80px 0;
+  }
+
+  .form-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .form-info {
+    text-align: center;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contact-form textarea {
+    min-height: 120px;
+  }
 }
 
-* {
-  outline: 1px solid red;
-}*/
+html,
+body {
+  overflow-x: hidden;
+}
