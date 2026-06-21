@@ -540,7 +540,7 @@ ul {
 }
 
 .faq-item summary {
-  padding: 22px 25px;
+  padding: 22px 60px 22px 25px;
 
   font-size: 18px;
   font-weight: 600;
@@ -2555,6 +2555,33 @@ ul {
     min-height: 120px;
   }
 }
+
+@media (max-width: 768px) {
+  .foreign-docs {
+    padding: 70px 0;
+  }
+
+  .foreign-docs .container {
+    padding: 35px 25px;
+  }
+
+  .foreign-docs h2 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .foreign-docs p {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .foreign-badge {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
 
 html,
 body {
