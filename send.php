@@ -1,28 +1,50 @@
 <?php
 
-header('Content-Type: application/json');
+header('Content-Type: application/json; charset=UTF-8');
 
-$token="ВАШ_ТОКЕН";
+/* ==========================
+   Telegram
+========================== */
 
-$chat_id="ВАШ_CHAT_ID";
+$config = require "config.php";
 
-$service = htmlspecialchars($_POST["service"] ?? "");
+$token = $config["token"];
+$chat_id = $config["chat_id"];
 
-$name=htmlspecialchars($_POST["name"] ?? "");
+/* ==========================
+   Получение данных
+========================== */
 
-$phone=htmlspecialchars($_POST["phone"] ?? "");
+$service = trim(htmlspecialchars($_POST["service"] ?? ""));
+$name = trim(htmlspecialchars($_POST["name"] ?? ""));
+$phone = trim(htmlspecialchars($_POST["phone"] ?? ""));
+$email = trim(htmlspecialchars($_POST["email"] ?? ""));
+$comment = trim(htmlspecialchars($_POST["comment"] ?? ""));
+$page = trim(htmlspecialchars($_POST["page"] ?? ""));
 
-$email=htmlspecialchars($_POST["email"] ?? "");
+$ip = $_SERVER["REMOTE_ADDR"] ?? "Неизвестно";
+$date = date("d.m.Y H:i");
 
-$comment=htmlspecialchars($_POST["comment"] ?? "");
+/* ==========================
+   Проверка обязательных полей
+========================== */
 
-$page=htmlspecialchars($_POST["page"] ?? "");
+if (empty($name) || empty($phone)) {
 
-$ip=$_SERVER["REMOTE_ADDR"];
+    echo json_encode([
+        "ok" => false,
+        "error" => "Заполните обязательные поля."
+    ]);
 
-$date=date("d.m.Y H:i");
+    exit;
+}
 
-$message="📩 Новая заявка с сайта Aibaniz
+/* ==========================
+   Сообщение Telegram
+========================== */
+
+$message =
+"📩 Новая заявка с сайта Aibaniz
 
 📄 Услуга:
 $service
@@ -39,39 +61,54 @@ $email
 💬 Комментарий:
 $comment
 
+🌐 Страница:
+$page
+
 🕒 Время:
-$date";
+$date
 
-$url="https://api.telegram.org/bot$token/sendMessage";
+🌍 IP:
+$ip";
 
-$data=[
+/* ==========================
+   Отправка в Telegram
+========================== */
 
-"chat_id"=>$chat_id,
+$url = "https://api.telegram.org/bot{$token}/sendMessage";
 
-"text"=>$message
-
+$data = [
+    "chat_id" => $chat_id,
+    "text" => $message
 ];
 
-$options=[
+$ch = curl_init($url);
 
-"http"=>[
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_TIMEOUT, 15);
 
-"header"=>"Content-Type: application/x-www-form-urlencoded\r\n",
+$result = curl_exec($ch);
+$error = curl_error($ch);
+$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
-"method"=>"POST",
+curl_close($ch);
 
-"content"=>http_build_query($data)
+/* ==========================
+   Ответ JavaScript
+========================== */
 
-]
+if ($result === false || $httpCode !== 200) {
 
-];
+    echo json_encode([
+        "ok" => false,
+        "error" => $error ?: "Ошибка Telegram API (HTTP {$httpCode})."
+    ]);
 
-$context=stream_context_create($options);
+} else {
 
-$result=file_get_contents($url,false,$context);
+    echo json_encode([
+        "ok" => true
+    ]);
 
-echo json_encode([
-
-"ok"=>$result!==false
-
-]);
+}

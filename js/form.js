@@ -1,59 +1,60 @@
 
 const form = document.getElementById("contactForm");
 
-if(form){
+if (form) {
 
-form.addEventListener("submit", async function(e){
+    form.addEventListener("submit", async function (e) {
 
-    e.preventDefault();
+        e.preventDefault();
 
-    const button=document.getElementById("submitBtn");
+        const button = document.getElementById("submitBtn");
+        const success = document.getElementById("successMessage");
 
-    button.disabled=true;
-    button.textContent="Отправка...";
+        success.style.display = "none";
 
-    const formData=new FormData(form);
+        button.disabled = true;
+        button.textContent = "Отправка...";
 
-    formData.append("page",window.location.href);
+        const formData = new FormData(form);
+        formData.append("page", window.location.href);
 
-    try{
+        try {
 
-        const response=await fetch("send.php",{
+            const response = await fetch("send.php", {
+                method: "POST",
+                body: formData
+            });
 
-            method:"POST",
+            if (!response.ok) {
+                throw new Error("Ошибка сервера");
+            }
 
-            body:formData
+            const result = await response.json();
 
-        });
+            if (result.ok) {
 
-        const result=await response.json();
+                form.reset();
 
-        if(result.ok){
+                success.style.display = "block";
+                success.innerHTML = "✅ Спасибо! Заявка успешно отправлена.";
 
-            form.reset();
+            } else {
 
-            const success=document.getElementById("successMessage");
+                alert(result.error || "Ошибка отправки.");
 
-            success.style.display="block";
+            }
 
-            success.innerHTML="✅ Спасибо! Заявка успешно отправлена.";
+        } catch (error) {
 
-        }else{
+            alert("Ошибка соединения с сервером.");
 
-            alert("Ошибка отправки.");
+            console.error(error);
 
         }
 
-    }catch{
+        button.disabled = false;
+        button.textContent = "Отправить заявку";
 
-        alert("Ошибка соединения.");
-
-    }
-
-    button.disabled=false;
-
-    button.textContent="Отправить заявку";
-
-});
+    });
 
 }

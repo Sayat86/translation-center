@@ -1,0 +1,11 @@
+# Конфигурация
+config.php
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
