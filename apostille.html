@@ -453,26 +453,34 @@
             </p>
           </div>
 
-          <form class="contact-form">
-            <label> Ваше имя <span class="required">*</span> </label>
-            <input type="text" name="name" required />
+          <form class="contact-form" id="contactForm">
 
-            <label> Телефон <span class="required">*</span> </label>
-            <input type="tel" name="phone" required />
+            <input type="hidden" name="service" value="Апостиль">
 
-            <label>
-              Email <span class="optional">(необязательно)</span>
-            </label>
-            <input type="email" name="email" />
+            <label>Ваше имя <span class="required">*</span></label>
+            <input type="text" name="name" required>
 
-            <label>
-              Комментарий <span class="optional">(необязательно)</span>
-            </label>
+            <label>Телефон <span class="required">*</span></label>
+            <input type="tel" name="phone" required>
+
+            <label>Email <span class="optional">(необязательно)</span></label>
+            <input type="email" name="email">
+
+            <label>Комментарий <span class="optional">(необязательно)</span></label>
             <textarea name="comment"></textarea>
 
-            <button type="submit">Отправить заявку</button>
-            <p class="form-note">* Обязательные поля для заполнения</p>
+            <button id="submitBtn" type="submit">
+              Отправить заявку
+            </button>
+
+            <p class="form-note">
+              * Обязательные поля
+            </p>
+
+            <div id="successMessage"></div>
+
           </form>
+
         </div>
       </div>
     </section>
@@ -483,12 +491,14 @@
   <a href="https://wa.me/77015637388" class="whatsapp-btn" target="_blank" aria-label="WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
-  
-  <a href="https://t.me/aibaniz" class="telegram-btn-float" target="_blank">
+
+  <a href="https://t.me/Aibaniz_Veliyeva" class="telegram-btn-float" target="_blank" rel="noopener noreferrer">
     <i class="fa-brands fa-telegram"></i>
   </a>
 
   <script src="js/include.js"></script>
+  <script src="js/script.js"></script>
+  <script src="form.js"></script>
 </body>
 
 </html>

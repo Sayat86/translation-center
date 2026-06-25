@@ -2072,6 +2072,24 @@ ul {
   font-weight: 600;
 }
 
+#successMessage{
+
+    margin-top:20px;
+
+    color:#16a34a;
+
+    font-weight:700;
+
+    display:none;
+}
+
+#submitBtn:disabled{
+
+    opacity:.7;
+
+    cursor:not-allowed;
+}
+
 /* ======================
    ДОКУМЕНТЫ иностранный апостиль
 ====================== */

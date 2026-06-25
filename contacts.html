@@ -76,8 +76,8 @@
           <div class="contact-card">
             <h3>✈️ Telegram</h3>
             <p>
-              <a href="https://t.me/USERNAME" target="_blank">
-                @USERNAME
+              <a href="https://t.me/Aibaniz_Veliyeva" target="_blank" rel="noopener noreferrer">
+                @Aibaniz_Veliyeva
               </a>
             </p>
           </div>
@@ -138,6 +138,50 @@
       </div>
     </section>
 
+    <section class="contact-form-section">
+      <div class="container">
+        <div class="form-wrapper">
+          <div class="form-info">
+            <h2>Оставьте заявку</h2>
+
+            <p>
+              Мы свяжемся с вами, проверим документы и подскажем оптимальный
+              вариант оформления
+            </p>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+
+            <input type="hidden" name="service" value="Контакты">
+
+            <label>Ваше имя <span class="required">*</span></label>
+            <input type="text" name="name" required>
+
+            <label>Телефон <span class="required">*</span></label>
+            <input type="tel" name="phone" required>
+
+            <label>Email <span class="optional">(необязательно)</span></label>
+            <input type="email" name="email">
+
+            <label>Комментарий <span class="optional">(необязательно)</span></label>
+            <textarea name="comment"></textarea>
+
+            <button id="submitBtn" type="submit">
+              Отправить заявку
+            </button>
+
+            <p class="form-note">
+              * Обязательные поля
+            </p>
+
+            <div id="successMessage"></div>
+
+          </form>
+
+        </div>
+      </div>
+    </section>
+
     <section class="map-section">
       <div class="container">
         <h2>Наш офис</h2>
@@ -150,9 +194,11 @@
   </main>
 
   <div id="footer"></div>
-  
+
 
   <script src="js/include.js"></script>
+  <script src="js/script.js"></script>
+  <script src="form.js"></script>
 </body>
 
 </html>

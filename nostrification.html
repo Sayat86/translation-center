@@ -189,81 +189,122 @@
     </section>
 
     <section class="founder-section">
-        <div class="container">
-          <div class="founder-content">
-            <div class="founder-image">
-              <img
-                src="images/aibaniz.jpeg"
-                alt="Велиева Айбаниз - руководитель Aibaniz"
-              />
-            </div>
-
-            <div class="founder-text">
-              <span class="section-subtitle"> Руководитель Aibaniz </span>
-
-              <h2>Велиева Айбаниз, руководитель компании</h2>
-
-              <p>
-                Я являюсь руководителем компании Aibaniz и уже более 13 лет
-                помогаю клиентам решать вопросы, связанные с апостилем,
-                консульской легализацией, нострификацией и переводом документов
-                на все языки мира
-              </p>
-
-              <p>
-                Мы сопровождаем оформление документов для использования как в
-                Казахстане, так и за рубежом, обеспечивая профессиональный
-                сервис и индивидуальный подход к каждому клиенту
-              </p>
-
-              <p>
-                Для нас важно, чтобы каждый клиент получил понятную
-                консультацию, качественное сопровождение и уверенность в
-                результате
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="reviews">
-        <div class="container">
-          <div class="rating-summary">
-            <h3>★★★★★</h3>
-          </div>
-
-          <div class="section-header">
-
-            <h2>Реальные отзывы наших клиентов</h2>
-          </div>
-
-          <div class="reviews-gallery">
-            <img src="images/nos1.jpeg" alt="Отзыв клиента в 2GIS" />
-            <img src="images/review-5.jpeg" alt="Отзыв клиента в 2GIS" />
-          </div>
-
-          <div class="reviews-footer">
-            <a href="https://2gis.com/reviews/70000001113208645/review/251309256" target="_blank" class="btn-primary">
-              Смотреть все отзывы в 2GIS
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <section class="cta-section">
       <div class="container">
-        <h2>Нужна помощь с нострификацией?</h2>
+        <div class="founder-content">
+          <div class="founder-image">
+            <img src="images/aibaniz.jpeg" alt="Велиева Айбаниз - руководитель Aibaniz" />
+          </div>
 
-        <p>
-          Отправьте документы в WhatsApp и получите бесплатную консультацию.
-        </p>
+          <div class="founder-text">
+            <span class="section-subtitle"> Руководитель Aibaniz </span>
 
-        <a href="https://wa.me/77015637388" class="btn-primary">
-          Отправить документы
-        </a>
+            <h2>Велиева Айбаниз, руководитель компании</h2>
+
+            <p>
+              Я являюсь руководителем компании Aibaniz и уже более 13 лет
+              помогаю клиентам решать вопросы, связанные с апостилем,
+              консульской легализацией, нострификацией и переводом документов
+              на все языки мира
+            </p>
+
+            <p>
+              Мы сопровождаем оформление документов для использования как в
+              Казахстане, так и за рубежом, обеспечивая профессиональный
+              сервис и индивидуальный подход к каждому клиенту
+            </p>
+
+            <p>
+              Для нас важно, чтобы каждый клиент получил понятную
+              консультацию, качественное сопровождение и уверенность в
+              результате
+            </p>
+          </div>
+        </div>
       </div>
     </section>
+
+    <section class="reviews">
+      <div class="container">
+        <div class="rating-summary">
+          <h3>★★★★★</h3>
+        </div>
+
+        <div class="section-header">
+
+          <h2>Реальные отзывы наших клиентов</h2>
+        </div>
+
+        <div class="reviews-gallery">
+          <img src="images/nos1.jpeg" alt="Отзыв клиента в 2GIS" />
+          <img src="images/review-5.jpeg" alt="Отзыв клиента в 2GIS" />
+        </div>
+
+        <div class="reviews-footer">
+          <a href="https://2gis.com/reviews/70000001113208645/review/251309256" target="_blank" class="btn-primary">
+            Смотреть все отзывы в 2GIS
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Нужна помощь с нострификацией?</h2>
+
+      <p>
+        Отправьте документы в WhatsApp и получите бесплатную консультацию.
+      </p>
+
+      <a href="https://wa.me/77015637388" class="btn-primary">
+        Отправить документы
+      </a>
+    </div>
+  </section>
+
+  <section class="contact-form-section">
+    <div class="container">
+      <div class="form-wrapper">
+        <div class="form-info">
+          <h2>Оставьте заявку</h2>
+
+          <p>
+            Мы свяжемся с вами, проверим документы и подскажем оптимальный
+            вариант оформления
+          </p>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+
+          <input type="hidden" name="service" value="Нострификация">
+
+          <label>Ваше имя <span class="required">*</span></label>
+          <input type="text" name="name" required>
+
+          <label>Телефон <span class="required">*</span></label>
+          <input type="tel" name="phone" required>
+
+          <label>Email <span class="optional">(необязательно)</span></label>
+          <input type="email" name="email">
+
+          <label>Комментарий <span class="optional">(необязательно)</span></label>
+          <textarea name="comment"></textarea>
+
+          <button id="submitBtn" type="submit">
+            Отправить заявку
+          </button>
+
+          <p class="form-note">
+            * Обязательные поля
+          </p>
+
+          <div id="successMessage"></div>
+
+        </form>
+
+      </div>
+    </div>
+  </section>
   </main>
 
   <div id="footer"></div>
@@ -271,12 +312,14 @@
   <a href="https://wa.me/77015637388" class="whatsapp-btn" target="_blank" aria-label="WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
-  
-  <a href="https://t.me/aibaniz" class="telegram-btn-float" target="_blank">
+
+  <a href="https://t.me/Aibaniz_Veliyeva" class="telegram-btn-float" target="_blank" rel="noopener noreferrer">
     <i class="fa-brands fa-telegram"></i>
   </a>
 
   <script src="js/include.js"></script>
+  <script src="js/script.js"></script>
+  <script src="form.js"></script>
 </body>
 
 </html>
