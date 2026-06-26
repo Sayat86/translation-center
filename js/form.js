@@ -1,11 +1,21 @@
-
+console.log("form.js loaded");
 const form = document.getElementById("contactForm");
 
+console.log(form);
+
 if (form) {
+
+    console.log("Форма найдена");
 
     form.addEventListener("submit", async function (e) {
 
         e.preventDefault();
+
+        console.log("Нажали отправить");
+
+        const formData = new FormData(form);
+
+        console.log([...formData.entries()]);
 
         const button = document.getElementById("submitBtn");
         const success = document.getElementById("successMessage");
