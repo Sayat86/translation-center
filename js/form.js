@@ -3,6 +3,8 @@ const form = document.getElementById("contactForm");
 
 if (form) {
 
+    document.getElementById("formStart").value = Date.now();
+
     form.addEventListener("submit", async function (e) {
 
         e.preventDefault();
@@ -34,6 +36,8 @@ if (form) {
             if (result.ok) {
 
                 form.reset();
+
+                document.getElementById("formStart").value = Date.now();
 
                 success.style.display = "block";
                 success.textContent = "✅ Спасибо! Заявка успешно отправлена.";
