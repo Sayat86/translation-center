@@ -8,6 +8,22 @@ define('APP_STARTED', true);
 
 require 'security.php';
 
+if (
+    empty($config['token']) ||
+    empty($config['chat_id'])
+) {
+    telegramLog('config.php is missing token or chat_id');
+
+    http_response_code(500);
+
+    echo json_encode([
+        'ok' => false,
+        'error' => 'Ошибка конфигурации сайта.'
+    ]);
+
+    exit;
+}
+
 function telegramLog(string $message): void
 {
     $logDir = __DIR__ . '/logs';
